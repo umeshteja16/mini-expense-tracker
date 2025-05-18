@@ -30,12 +30,11 @@ A simple command-line application to manage your daily expenses, built using Jav
 ```
 
 MiniExpenseTracker\_Improved/
-├── src/
-│   ├── ExpenseTracker.java       # Main CLI logic
-│   ├── DB.java                   # All database operations
-│   └── CSVExporter.java          # CSV export utility
+├─ ExpenseTracker.java       # Main CLI logic
+│── DB.java                   # All database operations
+│──CSVExporter.java          # CSV export utility
 ├── lib/
-│   └── mysql-connector-java-8.0.33.jar  # JDBC driver (add manually)
+│   └── mysql-connector-j-9.3.0.jar  # JDBC driver (add manually)
 
 ````
 
@@ -66,10 +65,10 @@ conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/expense_db", "ro
 cd MiniExpenseTracker_Improved/src
 
 # Compile
-javac -cp ".;../lib/mysql-connector-java-8.0.33.jar" *.java
+javac -cp ".;../lib/mysql-connector-j-9.3.0.jar" *.java
 
 # Run
-java -cp ".;../lib/mysql-connector-java-8.0.33.jar" ExpenseTracker
+java -cp ".;../lib/mysql-connector-j-9.3.0.jar" ExpenseTracker
 ```
 
 > 🔁 On macOS/Linux, replace `;` with `:` in the classpath
