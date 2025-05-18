@@ -1,4 +1,3 @@
-```markdown
 # 💸 Mini Expense Tracker (Java + MySQL)
 
 A simple command-line application to manage your daily expenses, built using Java and MySQL. It supports adding, updating, deleting, viewing, exporting, and analyzing expenses directly from the terminal.
@@ -28,15 +27,13 @@ A simple command-line application to manage your daily expenses, built using Jav
 ## 📁 Folder Structure
 
 ```
-
-MiniExpenseTracker\_Improved/
-├─ ExpenseTracker.java       # Main CLI logic
-│── DB.java                   # All database operations
-│──CSVExporter.java          # CSV export utility
+MiniExpenseTracker_Improved/
+├── ExpenseTracker.java       # Main CLI logic
+├── DB.java                   # All database operations
+├── CSVExporter.java          # CSV export utility
 ├── lib/
 │   └── mysql-connector-j-9.3.0.jar  # JDBC driver (add manually)
-
-````
+```
 
 ---
 
@@ -46,29 +43,27 @@ MiniExpenseTracker\_Improved/
 
 1. Open MySQL Workbench or terminal.
 2. Run the following:
-
-```sql
-CREATE DATABASE expense_db;
-````
-
+   ```sql
+   CREATE DATABASE expense_db;
+   ```
 3. Update DB credentials in `DB.java`:
-
-```java
-conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/expense_db", "root", "your_password");
-```
+   ```java
+   conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/expense_db", "root", "your_password");
+   ```
 
 ---
 
 ### ✅ Step 2: Compile and Run (Command Line)
 
 ```bash
-cd MiniExpenseTracker_Improved/src
+# Navigate to the project folder
+cd MiniExpenseTracker_Improved
 
 # Compile
-javac -cp ".;../lib/mysql-connector-j-9.3.0.jar" *.java
+javac -cp ".;lib/mysql-connector-j-9.3.0.jar" *.java
 
 # Run
-java -cp ".;../lib/mysql-connector-j-9.3.0.jar" ExpenseTracker
+java -cp ".;lib/mysql-connector-j-9.3.0.jar" ExpenseTracker
 ```
 
 > 🔁 On macOS/Linux, replace `;` with `:` in the classpath
@@ -107,5 +102,5 @@ ID,Date,Category,Amount,Note
 
 ## 📌 Author
 
-Developed by Umesh Teja. This project demonstrates practical use of JDBC with MySQL, object-oriented programming in Java, and real-world data handling.
-
+Developed by **Umesh Teja**.  
+This project demonstrates practical use of JDBC with MySQL, object-oriented programming in Java, and real-world data handling.
